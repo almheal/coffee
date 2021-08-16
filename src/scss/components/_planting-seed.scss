@@ -1,0 +1,256 @@
+@import '../keyframes.scss';
+
+.planting{
+  position: relative;
+  height: 100vh;
+  padding-bottom: 13px;
+  &::before{
+    content: '';
+    width: 100%;
+    height: 13px;
+    background-image: url('../../img/planting-seed/border.png');
+    position: absolute;
+    left: 0;
+    z-index: 200;
+    bottom: 0;
+    background-color: $dirt;
+  }
+
+  &__body{
+    position: sticky;
+    left: 0;
+    top: 0;
+
+    height: 100vh;
+    overflow: hidden;
+    background-color: $light-green;
+  }
+
+
+  //hand
+  &__hand{
+    position: absolute;
+    top: 140px;
+    left: 210px;
+    z-index: 10;
+  }
+
+  &-bean{
+    position: absolute;
+    top: 200px;
+    left: 25%;
+    z-index: 20;
+    transform: translateX(-25%);
+
+    height: 153px;
+    width: 351px;
+
+    background-image: url('../../img/planting-seed/bean.png');
+    background-repeat: no-repeat;
+    background-size: 132px 153px;
+    background-position: center;
+  }
+
+  &__circle{
+    position: absolute;
+    top: 180px;
+    left: 25%;
+    z-index: 15;
+    transform: translateX(-25%);
+
+    width: 247px;
+    height: 247px;
+    border-radius: 50%;
+
+    display: none;
+    justify-content: center;
+    align-items: center;
+
+    opacity: 0;
+
+    text-align: center;
+    line-height: 1.3;
+    color: $white;
+
+    user-select: none;
+
+
+    &::before{
+      content: '';
+
+      position: absolute;
+      left: 0;
+      z-index: -1;
+
+      width: 100%;
+      height: 100%;
+
+      background-image: url('../../img/planting-seed/circle.png');
+      background-repeat: no-repeat;
+    }
+  }
+
+  //bottom-dirt
+  &__dirt{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    height: 257px;
+    width: 100%;
+
+    background-image: url('../../img/planting-seed/dirt-texture.png');
+    background-repeat: no-repeat;
+    background-color: $dirt;
+  }
+
+  //phases
+  &-phase{
+    position: absolute;
+    z-index: 15;
+    width: 351px;
+    height: 257px;
+
+    //top phases
+    &_top-first,
+    &_top-second,
+    &_top-third{
+      bottom: 257px;
+
+      height: 50px;
+
+      background-image: url('../../img/planting-seed/dirt-decor.png');
+      background-repeat: no-repeat;
+    }
+
+    &_top-first{
+      left: 25%;
+      transform: translateX(-25%);
+    }
+
+    &_top-second{
+      left: 50%;
+      transform: translateX(-50%);
+      .planting__text{
+        bottom: 155px;
+      }
+    }
+
+    &_top-third{
+      left: 75%;
+      transform: translateX(-75%);
+      .planting__text{
+        bottom: 195px;
+      }
+    }
+
+    //TOP-STEPS
+    &_top{
+      &.step-1{
+        background-image: url('../../img/planting-seed/small-phase.png');
+        background-position: bottom center;
+      }
+      &.step-2{
+        background-image: url('../../img/planting-seed/top-phase-3.png');
+        background-position: bottom center;
+        background-size: auto 64px;
+        height: 360px;
+      }
+      &.step-3{
+        background-image: url('../../img/planting-seed/top-phase4.png');
+        background-size: auto 253px;
+        background-position: bottom center;
+        height: 360px;
+      }
+      &.step-4{
+        background-image: url('../../img/planting-seed/top-phase5.png');
+        background-size: auto 308px;
+        background-position: bottom center;
+        height: 360px;
+      }
+      &.step-5{
+        background-image: url('../../img/planting-seed/top-phase6.png');
+        height: 460px;
+        background-size: auto 460px;
+        background-position: bottom center;
+      }
+    }
+
+
+    //bottom phases
+    &_bottom-first,
+    &_bottom-second,
+    &_bottom-third{
+      background-repeat: no-repeat;
+      background-position: top center;
+      bottom: 0;
+    }
+
+    &_bottom-first{
+      left: 25%;
+      transform: translateX(-25%);
+      background-image: url('../../img/planting-seed/plant-phase.png');
+    }
+
+    &_bottom-second{
+      left: 50%;
+      transform: translateX(-50%);
+      background-image: url('../../img/planting-seed/plant-phase-bean.png');
+    }
+
+    &_bottom-third{
+      left: 75%;
+      transform: translateX(-75%);
+      background-image: url('../../img/planting-seed/plant-phase-bean.png');
+    }
+
+    //BOTTOM-STEPS
+    &_bottom{
+      &.step-1{
+        background-image: url('../../img/planting-seed/bean.png');
+        background-position: center;
+      }
+      &.step-2{
+        background-position: top;
+        background-image: url('../../img/planting-seed/plant-phase3.png');
+      }
+      &.step-3{
+        background-image: url('../../img/planting-seed/bottom-phase-4.png');
+      }
+      &.step-4{
+        background-image: url('../../img/planting-seed/bottom-phase5.png');
+      }
+    }
+  }
+
+  &__text{
+    display: inline-block;
+    position: absolute;
+    right: -10px;
+    bottom: 0;
+    opacity: 0;
+    user-select: none;
+  }
+
+  //clouds
+  &__cloud{
+    position: absolute;
+    left: 0;
+    &_first{
+      top: 70px;
+      animation: 80s animationCloud linear infinite;
+    }
+    &_second{
+      top: 200px;
+      animation: 50s animationCloud linear infinite;
+    }
+    &_third{
+      top: 300px;
+      animation: 60s animationCloud linear infinite;
+    }
+    &_fourth{
+      top: 400px;
+      animation: 150s animationCloud linear infinite;
+    }
+  }
+}

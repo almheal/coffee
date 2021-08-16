@@ -1,0 +1,6 @@
+const growingArabica = document.querySelector('[data-growing-arabica]')
+const growingRobusta = document.querySelector('[data-growing-robusta]')
+const growingFirstMountains = document.querySelector('[data-growing-mountains-first]')
+const growingSecondMountains = document.querySelector('[data-growing-mountains-second]')
+const growingTropicText = document.querySelector('[data-growing-tropic-text]')
+const growingSubTropicText = document.querySelector('[data-growing-subtropic-text]')

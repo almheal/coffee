@@ -7,9 +7,96 @@
   <title>Coffee</title>
   <link href="./css/index.min.css" rel="stylesheet" />
   <link rel="shortcut icon" href="/img/favicon/favicon.ico" type="image/x-icon">
-  <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,500&display=swap" rel="stylesheet">
 </head>
 <body>
+  <main class="main">
+    <section class="intro" data-element="intro">
+  <div class="intro__inner">
+    <img class="intro__img" src="./img/intro/title.png" alt="intro-title" />
+    <div class="intro__text">
+      <p>scroll down to brew</p>
+    </div>
+  </div>
+</section>
+    <section class="planting" data-element="planting">
+  <div class="planting__body">
+    <div class="section-header">
+      <h3 class="section-header__title">Planting the seed</h3>
+    </div>
+
+    <!--HAND-->
+    <img class="planting__hand" data-planting-hand src="./img/planting-seed/hand.png" alt="hand"/>
+    <!--BEAN WITH HAND-->
+    <div class="planting-bean" data-planting-bean></div>
+
+    <!--circle info planting garden bed-->
+    <div class="planting__circle" data-planting-circle>
+      Coffee seeds are generally planted in large beds in shaded nurseries
+    </div>
+
+    <!--TOP PHASES-->
+    <div class="planting-phase planting-phase_top planting-phase_top-first" data-planting-first-top-phase></div>
+    <div class="planting-phase planting-phase_top planting-phase_top-second" data-planting-second-top-phase>
+      <span class="planting__text" data-planting-second-text>Three months</span>
+    </div>
+    <div class="planting-phase planting-phase_top planting-phase_top-third" data-planting-third-top-phase>
+      <span class="planting__text" data-planting-third-text>Nine months</span>
+    </div>
+
+    <!--BOTTOM PHASES-->
+    <div class="planting-phase planting-phase_bottom planting-phase_bottom-first" data-planting-first-bottom-phase></div>
+    <div class="planting-phase planting-phase_bottom planting-phase_bottom-second" data-planting-second-bottom-phase></div>
+    <div class="planting-phase planting-phase_bottom planting-phase_bottom-third" data-planting-third-bottom-phase></div>
+
+    <!--BOTTOM DECOR DIRT-->
+    <div class="planting__dirt"></div>
+
+    <!--NOVES CLOUDS-->
+    <img class="planting__cloud planting__cloud_first" src="./img/planting-seed/cloud1.png" alt="cloud"/>
+    <img class="planting__cloud planting__cloud_second" src="./img/planting-seed/cloud2.png" alt="cloud"/>
+    <img class="planting__cloud planting__cloud_third" src="./img/planting-seed/cloud3.png" alt="cloud"/>
+    <img class="planting__cloud planting__cloud_fourth" src="./img/planting-seed/cloud4.png" alt="cloud"/>
+  </div>
+</section>
+    <section class="growing" data-element="growing">
+  <div class="growing__body">
+    <div class="section-header">
+      <h3 class="section-header__title">Growing conditions</h3>
+      <div class="growing__subtitle">
+        IDEAL ALTITUDE <br/> in feet
+      </div>
+    </div>
+    <div class="growing-mountains">
+      <div class="growing-wrapper growing-wrapper__text">
+        <div class="growing-mountains__text growing-mountains__text_first" data-growing-tropic-text>Tropical climate</div>
+        <div class="growing-mountains__text growing-mountains__text_second" data-growing-subtropic-text>Subtropical climate</div>
+      </div>
+
+      <div class="growing-wrapper">
+        <div class="growing-bean growing-bean__arabica" data-growing-arabica>
+          <img class="growing__arabica" src="../img/growing/arabica.png" alt="arabica">
+          <div class="growing-bean__title">Robusta beans</div>
+        </div>
+        <div class="growing-bean growing-bean__robusta" data-growing-robusta>
+          <img class="growing__robusta" src="../img/growing/robusta.png" alt="robusta">
+          <div class="growing-bean__title">Arabica beans</div>
+        </div>
+      </div>
+
+      <img class="growing-mountains__item growing-mountains__item_default" src="../img/growing/mountains.png" alt="mountains"/>
+      <img class="growing-mountains__item growing-mountains__item_second" data-growing-mountains-first src="../img/growing/mountains-1.png" alt="mountains"/>
+      <img class="growing-mountains__item growing-mountains__item_third" data-growing-mountains-second src="../img/growing/mountains-2.png" alt="mountains"/>
+    </div>
+
+    <img class="growing__scale" src="../img/growing/scale.png" alt="scale">
+
+    <img class="growing__cloud growing__cloud_first" src="../img/growing/cloud-1.png" alt="growing-cloud">
+    <img class="growing__cloud growing__cloud_second" src="../img/growing/cloud-2.png" alt="growing-cloud">
+  </div>
+</section>
+    <section class="next"></section>
+  </main>
   <script src="js/index.js"></script>
 </body>
 </html>

@@ -1,6 +1,35 @@
 @import './reset';
+@import './variables';
+
+//components
+@import './components/intro';
+@import './components/planting-seed';
+@import './components/growing';
 
 body{
   font-family: 'Alegreya Sans', sans-serif;
   font-weight: 400;
+}
+
+.main{
+  position: relative;
+}
+
+.section-header{
+  position: relative;
+  z-index: 10;
+
+  &__title{
+    padding: 15px 0;
+
+    font-size: 100px;
+    font-weight: 500;
+    font-style: italic;
+    text-align: center;
+    color: $white;
+  }
+}
+
+.next{
+  height: 100vh;
 }
